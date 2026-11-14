@@ -22,7 +22,15 @@ function Chat() {
 
     checkBackend();
 
-    const wsUrl = import.meta.env.VITE_WS_URL || 'ws://localhost:8080';
+    const getDefaultWsUrl = () => {
+      const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+      const host = window.location.hostname || 'localhost';
+      const port = window.location.port ? `:${window.location.port}` : '';
+
+      return `${protocol}://${host}${port}`;
+    };
+
+    const wsUrl = import.meta.env.VITE_WS_URL || getDefaultWsUrl();
     const ws = new WebSocket(wsUrl);
 
     connection.current = ws;
