@@ -1,3 +1,5 @@
+#Live link :wesocket-application.netlify.app
+
 # WebSocket Chat Application
 
 This project is a simple real-time chat app built with a Node.js WebSocket server, Redis pub/sub messaging, and a React frontend. It shows how messages can be broadcast to all connected clients instantly without reloading the page.
