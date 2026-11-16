@@ -1,4 +1,4 @@
-#Live link :wesocket-application.netlify.app
+#Live link : https://wesocket-application.netlify.app/
 
 # WebSocket Chat Application
 
